@@ -492,5 +492,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# Inherit from the OnePlus Apps makefile.
+$(call inherit-product, vendor/oneplus/apps/config.mk)
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/avicii/avicii-vendor.mk)
