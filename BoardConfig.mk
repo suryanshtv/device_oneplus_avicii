@@ -98,7 +98,7 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_avicii
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oplus
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
@@ -123,9 +123,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=oneplus
 TARGET_KERNEL_SOURCE := kernel/oneplus/avicii
-TARGET_KERNEL_CONFIG := avicii_defconfig
-TARGET_KERNEL_CLANG_VERSION := r487747c
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/kernel/oneplus/avicii/clang
+TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -170,7 +168,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2023-05-05
+VENDOR_SECURITY_PATCH := 2023-03-05
 
 # SEPolicy
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
