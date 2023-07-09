@@ -322,8 +322,6 @@
     <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="0" />
     <ctl name="RX INT0 DEM MUX" value="NORMAL_DSM_OUT" />
     <ctl name="RX INT1 DEM MUX" value="NORMAL_DSM_OUT" />
-    <ctl name="RX_COMP1 Switch" value="0" />
-    <ctl name="RX_COMP2 Switch" value="0" />
     <ctl name="HPHL_COMP Switch" value="0" />
     <ctl name="HPHR_COMP Switch" value="0" />
     <ctl name="EAR_RDAC Switch" value="0" />
@@ -374,24 +372,24 @@
     <ctl name="TX SMIC MUX7" value="ZERO" />
 
     <!-- Volume controls -->
-    <ctl name="WSA_RX0 Digital Volume" value="84" />
-    <ctl name="WSA_RX1 Digital Volume" value="84" />
+    <ctl name="WSA_RX0 Digital Volume" value="86" />
+    <ctl name="WSA_RX1 Digital Volume" value="86" />
     <!-- Decrease Headphone and Earpiece volume -->
-    <ctl name="RX_RX0 Digital Volume" value="79" />
-    <ctl name="RX_RX1 Digital Volume" value="79" />
-    <ctl name="RX_RX2 Digital Volume" value="84" />
+    <ctl name="RX_RX0 Digital Volume" value="81" />
+    <ctl name="RX_RX1 Digital Volume" value="81" />
+    <ctl name="RX_RX2 Digital Volume" value="86" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
-    <ctl name="TX_DEC0 Volume" value="84" />
-    <ctl name="TX_DEC1 Volume" value="84" />
-    <ctl name="TX_DEC2 Volume" value="84" />
-    <ctl name="TX_DEC3 Volume" value="84" />
-    <ctl name="TX_DEC4 Volume" value="84" />
-    <ctl name="TX_DEC5 Volume" value="84" />
-    <ctl name="TX_DEC6 Volume" value="84" />
-    <ctl name="TX_DEC7 Volume" value="84" />
+    <ctl name="TX_DEC0 Volume" value="86" />
+    <ctl name="TX_DEC1 Volume" value="86" />
+    <ctl name="TX_DEC2 Volume" value="86" />
+    <ctl name="TX_DEC3 Volume" value="86" />
+    <ctl name="TX_DEC4 Volume" value="86" />
+    <ctl name="TX_DEC5 Volume" value="86" />
+    <ctl name="TX_DEC6 Volume" value="86" />
+    <ctl name="TX_DEC7 Volume" value="86" />
 
     <ctl name="ADC1 Volume" value="12" />
     <ctl name="ADC2 Volume" value="12" />
@@ -400,8 +398,10 @@
     <!-- Compander controls -->
     <ctl name="WSA_COMP1 Switch" value="0" />
     <ctl name="WSA_COMP2 Switch" value="0" />
-    <ctl name="COMP7 Switch" value="0" />
-    <ctl name="COMP8 Switch" value="0" />
+    <ctl name="RX_COMP1 Switch" value="0" />
+    <ctl name="RX_COMP2 Switch" value="0" />
+    <ctl name="COMP7 Switch" value="1" />
+    <ctl name="COMP8 Switch" value="1" />
 
     <!-- Headphone class-H mode -->
     <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
@@ -438,7 +438,7 @@
     <ctl name="IIR0 Enable Band3" value="0" />
     <ctl name="IIR0 Enable Band4" value="0" />
     <ctl name="IIR0 Enable Band5" value="0" />
-    <ctl name="IIR0 INP0 Volume" value="54" />
+    <ctl name="IIR0 INP0 Volume" value="58" />
     <ctl name="IIR0 INP0 MUX" value="ZERO" />
     <ctl name="IIR0 INP1 MUX" value="ZERO" />
     <ctl name="IIR0 INP2 MUX" value="ZERO" />
@@ -645,8 +645,31 @@
         <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
     </path>
 
+	<!-- CURRENT EXPERIMENTAL -->
     <path name="deep-buffer-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
+	    <!--suryanshtv-EARPIECE RX RELAY ON-->
+	<ctl name="RX_EAR Mode" value="ON" />
+	    <!--suryanshtv-EARPIECE GAIN SET TO G_6_DB FROM DEFAULT STOCK-->
+	<ctl name="EAR PA Gain" value="G_6_DB" />
+	    <!--suryanshtv-EARPIECE MUX SWITCH-->
+        <ctl name="RDAC3_MUX" value="RX1" />
+	    <!--suryanshtv-SOURCE TO EARPIECE RElAY-->
+	<ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+	<ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+	<ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+	    <!--suryanshtv-EARPICE VOLUME INCREASED BY 3 FROM STOCK, STILL NO ISSUES-->
+	<ctl name="RX_RX0 Digital Volume" value="88" />
+	<ctl name="RX_RX1 Digital Volume" value="84" />
+	    <!--suryanshtv-CHANNELS SET TO 1 //wasnt able to figure out how mixers are working internally// 
+            FORMAT IS SET TO STOCK "S16_LE" //check <path name="handset"...  
+	    -->
+	<ctl name="RX_CDC_DMA_RX_0 Channels" value="One" />
+        <ctl name="RX_CDC_DMA_RX_0 Format" value="S16_LE" />
+	    <!--suryanshtv-EARPIECE RDAC SWITCHA AND DL_HL SWITCH-->
+	<ctl name="EAR_RDAC Switch" value="1" />
+	<ctl name="RX_CDC_DMA_RX_0_DL_HL Switch" value="1" />
     </path>
 
     <path name="deep-buffer-playback dummy">
@@ -2990,7 +3013,7 @@
 
     <path name="sidetone-headphones">
         <path name="sidetone-iir" />
-        <ctl name="IIR0 INP0 Volume" value="54" />
+        <ctl name="IIR0 INP0 Volume" value="58" />
         <ctl name="IIR0 INP0 MUX" value="DEC0" />
         <ctl name="RX INT0 MIX2 INP" value="SRC0" />
         <ctl name="RX INT1 MIX2 INP" value="SRC0" />
@@ -2998,7 +3021,7 @@
 
     <path name="sidetone-handset">
         <path name="sidetone-iir" />
-        <ctl name="IIR0 INP0 Volume" value="54" />
+        <ctl name="IIR0 INP0 Volume" value="58" />
         <ctl name="IIR0 INP0 MUX" value="DEC0" />
         <ctl name="RX INT2 MIX2 INP" value="SRC0" />
     <!-- #ifdef VENDOR_EDIT -->
@@ -4456,7 +4479,6 @@
     </path>
 
     <path name="mmi-mic-record">
-        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
         <ctl name="TX DEC0 MUX" value="SWR_MIC" />
         <ctl name="TX SMIC MUX0" value="ADC0" />
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
@@ -4469,8 +4491,11 @@
         <ctl name="ADC4 MUX" value="INP5" />
         <ctl name="TX_DEC0 Volume" value="102" />
         <ctl name="TX_DEC1 Volume" value="102" />
-        <ctl name="ADC1 Volume" value="5" />
-        <ctl name="ADC4 Volume" value="5" />
+        <ctl name="ADC1 Volume" value="12" />
+	<ctl name="ADC2 Volume" value="12" />
+        <ctl name="ADC3 Volume" value="12" />
+        <ctl name="ADC4 Volume" value="12" />
+	<ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
     </path>
 
     <path name="mmi-anc-mic-record">
