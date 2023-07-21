@@ -654,17 +654,15 @@
         @suryanshtv-EARPIECE FORWARD MIXER RX_MACRO
 	@suryanshtv-EARPIECE MUX SWITCH
 	@suryanshtv-SOURCE TO EARPIECE RELAY
-        @suryanshtv-EARPIECE SPKR GAIN SET TO G_DEFAULT STOCK
         @suryanshtv-EARPIECE PA GAIN SET TO G_3_DB
 	@suryanshtv-EARPIECE RDAC SWITCH
         @suryanshtv-EARPIECE RX RELAY ON   
 		-->
-        <ctl name="RX_RX0 Digital Volume" value="90" />
+        <ctl name="RX_RX0 Digital Volume" value="84" />
         <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
 	<ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
         <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
-        <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
-        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <ctl name="EAR PA Gain" value="G_0_DB" />
         <ctl name="EAR_RDAC Switch" value="1" />
 	<ctl name="RX_EAR Mode" value="ON" />
     </path>
