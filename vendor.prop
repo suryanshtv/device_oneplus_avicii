@@ -25,7 +25,7 @@ vendor.audio.enable.mirrorlink=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.anc_headset.enable=true
-vendor.audio.feature.audiozoom.enable=false
+vendor.audio.feature.audiozoom.enable=true
 vendor.audio.feature.battery_listener.enable=true
 vendor.audio.feature.compr_cap.enable=false
 vendor.audio.feature.compr_voip.enable=false
@@ -33,7 +33,7 @@ vendor.audio.feature.compress_in.enable=true
 vendor.audio.feature.compress_meta_data.enable=true
 vendor.audio.feature.concurrent_capture.enable=true
 vendor.audio.feature.custom_stereo.enable=true
-vendor.audio.feature.deepbuffer_as_primary.enable=false
+vendor.audio.feature.deepbuffer_as_primary.enable=true
 vendor.audio.feature.display_port.enable=true
 vendor.audio.feature.dsm_feedback.enable=false
 vendor.audio.feature.dynamic_ecns.enable=true
@@ -46,7 +46,7 @@ vendor.audio.feature.fm.enable=true
 vendor.audio.feature.hdmi_edid.enable=true
 vendor.audio.feature.hdmi_passthrough.enable=true
 vendor.audio.feature.hfp.enable=true
-vendor.audio.feature.hifi_audio.enable=false
+vendor.audio.feature.hifi_audio.enable=true
 vendor.audio.feature.hwdep_cal.enable=false
 vendor.audio.feature.incall_music.enable=true
 vendor.audio.feature.keep_alive.enable=true
@@ -138,6 +138,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.metadata.method=dm-default-key
 
 # Display
+debug.sf.disable_client_composition_cache=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.enable_async_powermode=0
@@ -164,6 +165,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1
@@ -181,7 +185,6 @@ ro.hardware.vulkan=adreno
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_idle_timer_ms=4000
 ro.surface_flinger.set_touch_timer_ms=4000
@@ -189,6 +192,8 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 vendor.opengles.version=196610
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=20
 
 # Incremental FS
 ro.incremental.enable=yes
@@ -211,6 +216,7 @@ persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.custom_ecc=0
 persist.vendor.radio.enableadvancedscan=true
+persist.vendor.radio.poweron_opt=1
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1

@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus Nord (AC2003_11_F.19).
+## from OnePlus Nord (AC2003_11_F.20).
 
 # ACDBs
 odm/etc/acdbdata/Audio_Parameter_Version.txt
@@ -503,6 +503,9 @@ vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
+
+# IMS - from LA.QSSI.13.0.r1-05300-qssi.0
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
 
 # Sensors
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service

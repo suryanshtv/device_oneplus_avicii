@@ -16,16 +16,15 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Additional stuff for this product.
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_PIXEL_CHARGER := true
-SUPERIOR_UDFPS_ANIMATIONS := true
-USE_AOSP_DIALER := true
+EXTRA_UDFPS_ANIMATIONS := true
 TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_NAME := aosp_avicii
 PRODUCT_DEVICE := avicii
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := AC2003
+PRODUCT_MODEL := AC2001
 
 CUSTOM_DEVICE := Nord
 PRODUCT_SYSTEM_NAME := Nord
