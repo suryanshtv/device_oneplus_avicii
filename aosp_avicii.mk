@@ -17,8 +17,8 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Additional stuff for this product.
 TARGET_BOOT_ANIMATION_RES := 1080
 EXTRA_UDFPS_ANIMATIONS := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_GAPPS_ARCH := arm64
-TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_NAME := aosp_avicii
 PRODUCT_DEVICE := avicii
